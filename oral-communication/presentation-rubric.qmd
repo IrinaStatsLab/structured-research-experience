@@ -1,0 +1,72 @@
+---
+format:
+  typst:
+    papersize: us-letter
+    keep-typ: false
+---
+
+```{=typst}
+// Landscape page and rubric styling
+#set page(flipped: true, margin: (x: 1.3cm, y: 1.3cm))
+#set text(size: 9.5pt)
+#show heading.where(level: 1): set text(fill: rgb("#1f3a6e"), size: 17pt)
+#show heading.where(level: 2): set text(fill: rgb("#1f3a6e"), size: 12pt)
+#show table.cell.where(y: 0): set text(fill: white, weight: "bold", size: 8.5pt)
+#set table(
+  fill: (x, y) => if y == 0 { rgb("#1f3a6e") } else if x == 0 { rgb("#e8edf6") },
+  stroke: 0.5pt + rgb("#9aa5b1"),
+  inset: 5pt,
+)
+#show table: set text(size: 8pt)
+```
+
+# Oral Presentation Assessment Rubric
+
+*For statistical, data analysis, and scientific presentations · Irina Gaynanova*
+
+This rubric assesses oral presentations on five criteria, each scored from 0 to 3, for a total of **15 points**. Criteria 1, 2, 4, and 5 apply to any scientific or technical presentation. Criterion 3 (content mastery) is offered in two tracks: **Track A** for presentations of a statistical or data analysis project, and **Track B** for general scientific or technical presentations. Choose one track and score Criterion 3 from it.
+
+## How to use
+
+Score each criterion by choosing the level that best describes the presentation; scores are whole points only. The descriptors under each level list the characteristics expected at that level. Space for comments is provided at the end --- specific, constructive comments are the most valuable part of the evaluation. For peer evaluation, the same criteria can be rephrased as agreement statements (e.g., "The presentation was organized and easy to follow," "The presenter spoke audibly and clearly") rated on a 5-point agreement scale.
+
+| Criterion | 0 --- Beginning | 1 --- Developing | 2 --- Proficient | 3 --- Exemplary |
+|---|---|---|---|---|
+| **1. Slide design & clarity** (visual quality of the slides) | Slides are cluttered or unreadable: dense text, tables and figures too small to see, frequent grammar or language errors; slides obscure rather than support the message. | Slides communicate the main points but have significant issues: crowded text or full sentences instead of concise bullet points, some tables or figures hard to read, noticeable grammar or language errors. | Slides are mostly clear and concise with only minor lapses, e.g., an occasional overloaded slide, a figure that could be larger, or small grammar and language slips. | Slides are clear and concise; tables and figures are easy to see and directly support the main points; grammar and language are polished; formatting (fonts, color, layout) highlights the key ideas. |
+| **2. Background & organization** (motivation, structure, and story) | Little or no background; the purpose of the work is unclear; the presentation is a disconnected list of facts with no discernible structure. | Some background is given, but it is insufficient to understand the purpose of the work; the order of the material is hard to follow in places. | Background is mostly sufficient and the presentation is organized, with minor gaps in the motivation or small jumps in the logical flow. | Background is clear and sufficient to understand the purpose of the work; the presentation is organized, easy to follow, and tells a coherent story that conveys the big picture rather than exhaustive technical detail. |
+| **3A. Content mastery --- Track A** (statistical / data analysis presentations) | Little-to-no exploration of the data and no concrete statistical analysis plan; methods and results, if presented, do not address the scientific objective. | Some exploration of the data and some discussion of the statistical analysis plan, but notable gaps in the analysis or its justification. | Familiarity with the data and a discussed statistical analysis plan, but minor flaws in the analysis or its interpretation, or a lack of recognition of potential challenges and limitations. | Clear familiarity with the data; a well-developed statistical analysis plan; a well-reasoned, concise discussion that naturally connects the data, the scientific objective, the statistical methods, and the results; recognizes challenges and limitations. |
+| **3B. Content mastery --- Track B** (general scientific / technical presentations) | Little evidence of engagement with the subject; no coherent approach, methodology, or argument; conclusions, if any, are unsupported. | Some engagement with the subject and some discussion of the approach or methodology, but notable gaps in the reasoning or evidence. | Solid command of the subject and a sound approach, with minor flaws in the reasoning or interpretation, or unacknowledged limitations. | Deep command of the subject; a well-developed approach or argument; a well-reasoned, concise discussion that naturally connects the motivation, the methods, and the conclusions; anticipates limitations and likely questions. |
+| **4. Vocal delivery & presence** (voice, pace, timing, and body language) | Largely inaudible or incomprehensible; pace far too fast or too slow; presenter faces the slides or the floor throughout; timing badly off. | Significant issues with audibility, pace, or body language, e.g., frequent turning away from the audience, rushed or dragging delivery, or running well over time. | Overall good delivery with slight issues in pace, volume, eye contact, or timing. | Presenter speaks audibly and clearly at an appropriate pace (not too slow, not too fast), faces the audience rather than the slides, makes eye contact, uses natural gestures, and stays within the allotted time. |
+| **5. Command of the material** (relationship between speaker and slides) | Reads from the slides or a script; uses technical jargon without explanation; disconnect between what is said and what the slides convey; does not demonstrate understanding of their own slides. | Demonstrates understanding of the slides, but with clear over-reliance on reading from them and lapses in the coherence of the oral explanation. | Conveys understanding of the material with only occasional reliance on the slides or brief unexplained jargon. | Conveys clear understanding of the material; explains technical terms for the audience; the oral communication augments the slides and guides the audience through them rather than repeating them. |
+
+: {tbl-colwidths="[15,21.25,21.25,21.25,21.25]"}
+
+*Criterion 3: score **either** Track A **or** Track B, whichever fits the presentation context --- not both.*
+
+## Scoring summary
+
+| Criterion | Score |
+|-----------------------------------|--------|
+| 1. Slide design & clarity | &nbsp;&nbsp;&nbsp; / 3 |
+| 2. Background & organization | &nbsp;&nbsp;&nbsp; / 3 |
+| 3. Content mastery (Track A or B) | &nbsp;&nbsp;&nbsp; / 3 |
+| 4. Vocal delivery & presence | &nbsp;&nbsp;&nbsp; / 3 |
+| 5. Command of the material | &nbsp;&nbsp;&nbsp; / 3 |
+| **Total** | **&nbsp;&nbsp;&nbsp; / 15** |
+
+: {tbl-colwidths="[30,10]"}
+
+**Comments** --- What worked well? What specific improvements would you suggest?
+
+```{=typst}
+#rect(width: 100%, height: 3.2cm, stroke: 0.5pt + rgb("#9aa5b1"))
+#v(0.3cm)
+```
+
+#### License {.unnumbered}
+
+```{=typst}
+#set text(size: 8pt, fill: rgb("#555555"))
+```
+
+"Oral Presentation Assessment Rubric" © 2026 by Irina Gaynanova is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt this rubric for any purpose, including commercially, provided you give appropriate credit, link to the license, and indicate if changes were made. Suggested attribution: "Adapted from the Oral Presentation Assessment Rubric by Irina Gaynanova, CC BY 4.0."
