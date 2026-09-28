@@ -1,0 +1,233 @@
+---
+title: "Academic Writing"
+subtitle: "A short guide to the process, the structure, and the introduction"
+author: "Irina Gaynanova"
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 2.2cm
+      y: 2.2cm
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+---
+
+```{=typst}
+#show heading.where(level: 1): set text(fill: rgb("#1f3a6e"))
+#show heading.where(level: 2): set text(fill: rgb("#1f3a6e"))
+#show link: set text(fill: rgb("#1f3a6e"))
+#set table(stroke: 0.5pt + rgb("#9aa5b1"), inset: 6pt)
+#show raw.where(block: true): set block(
+  fill: rgb("#f6f7f9"),
+  inset: 8pt,
+  radius: 2pt,
+  width: 100%,
+)
+#show quote: it => block(
+  fill: rgb("#f4f0e6"),
+  inset: 9pt,
+  radius: 2pt,
+  width: 100%,
+  stroke: (left: 2pt + rgb("#1f3a6e")),
+  it.body,
+)
+```
+
+# Writing is a skill
+
+Academic work involves a great deal of writing: papers, grant proposals,
+application materials, software documentation, dissertation chapters. All of it
+can be learned and improved like any other skill --- calculus, programming,
+gardening. It is also hard, especially if you care about quality, and it is
+mostly a matter of **discipline** rather than talent.
+
+Four practices do most of the work:
+
+- **Plan regular time blocks**, even short ones. Thirty minutes on a schedule
+  beats waiting for a long stretch.
+- **Separate generating text from editing.** Generating is about 20% of writing;
+  editing is the other 80%. Doing both at once stalls you on the first sentence.
+- **Embrace the bad first draft.** Its only job is to exist. You cannot edit a
+  blank page.
+- **Plan for repeated feedback**, and expect to edit, edit, edit as a result.
+
+What not to do:
+
+| Anti-pattern | Why it fails |
+|---|---|
+| Write one sentence and rewrite it five times | Editing before there is anything to edit |
+| Wait for a free three-hour block | It rarely comes; short blocks accumulate |
+| Wait for inspiration | Writing is discipline, not mood |
+| Give up because you are "not good at it" | It is a skill, and skills respond to practice |
+| Polish grammar before asking for feedback | Wasted effort on text that may be cut |
+
+: Habits that keep people from finishing {tbl-colwidths="[42,58]"}
+
+Excellence has two halves. The **process**: dedicated time and focus, generation
+separated from editing, planned feedback and multiple rounds of edits, version
+control (Overleaf for LaTeX, Google Docs for Word). The **product**: it follows
+the expected structure with all required components; its style is tailored to the
+audience; it aims to educate rather than confuse, with clear word choices and
+simple sentences and no hidden steps; and it is concise and concrete --- no
+watery sentences, no filler, claims substantiated with references.
+
+# Structure
+
+Two structures cover most cases. Decide the target journal first, then find two
+or three example papers from it to guide structure, style, and language.
+
+| Statistical methodology journals | Life sciences / domain journals |
+|---|---|
+| Introduction | Introduction |
+| Methods (may be several sections) | Methods |
+| Simulation studies | Results |
+| Application to X study | Discussion (often long) |
+| Discussion / Conclusions | |
+
+: Two common paper structures
+
+Machine learning conference papers usually merge simulation and data analysis
+into a single Numerical Comparison section, since benchmark datasets are standard
+there rather than simulated data.
+
+What each section does:
+
+**Methods** describes what you are going to do and how --- *not* the results. In
+a domain paper: study design (data source, collection, what was collected), data
+processing, statistical methods. In a methods paper: study design and processing
+if relevant, then the proposed model and estimation procedure (the core), then
+theoretical investigation if applicable.
+
+**Results** presents findings without interpreting them. In a domain paper: Table
+1 with sample characteristics, exploratory analysis as applicable, then results
+from fitted models. In a methods paper this is two sections --- Simulation
+studies, which always covers data generation, methods for comparison, metrics for
+comparison, and results; and Application to X study, which covers study design
+and processing (if not given earlier), methods for comparison including the
+proposed one, and results.
+
+**Discussion** gives a two-to-three sentence summary, then strengths and
+limitations, then opportunities for future research. Domain papers discuss at
+length, especially limitations and scientific implications. Statistics papers are
+shorter --- often a single paragraph, focused on the method and on future
+improvements.
+
+**Abstract**, typically 250 words or fewer, mirrors the paper: introduction,
+methods, results, conclusion. It must be self-contained, so that a reader gets
+the idea of the paper without reading it.
+
+# The introduction
+
+The introduction moves from broad to narrow and must hit four things: the context
+of the problem and why anyone should care; existing approaches and why they fall
+short (or what gaps remain in what is known); the new thing you will do about it;
+and an explicit statement of the work's contributions.
+
+Paragraph by paragraph, a typical version:
+
+| Paragraph | Job |
+|---|---|
+| 1 | Context for the problem. For a data-centric paper, connect to the data immediately. Establish that this is a setting worth looking at. |
+| 2–3 | Literature review: what has been done. The punchline is the gap or the limitation. |
+| 4 | Motivate your approach from that gap. The big sell --- what is cool about it, how it overcomes the limitation. |
+| Last | Outline of the paper: "The rest of the paper is organized as follows. In Section 2, we…" --- one line per section. |
+
+: The arc of a typical introduction {tbl-colwidths="[14,86]"}
+
+> Journals differ on that last paragraph. Most expect it; a few explicitly ask
+> that it be left out. Check before you submit.
+
+Real introductions vary around this template, and reading several of your target
+journal's is the fastest way to calibrate. A theoretical paper may go straight to
+a mathematical statement of the problem and close with a point-by-point
+contributions list. A short computational paper may spend two paragraphs on why
+the problem matters, one on the limitation of the state of the art, and one on
+how it is solved. An applied paper may open with the data type and concrete data
+questions before reviewing methods at all.
+
+# Why papers get rejected
+
+Most rejections trace to one of six reader reactions. Each has a fix, and each
+fix belongs mostly in the introduction.
+
+| The reader… | What addresses it |
+|---|---|
+| doesn't think the work is novel | Acknowledge existing work properly, and say clearly how yours differs and what is new |
+| doesn't see the problem being addressed | Articulate the specific question or problem the work solves |
+| sees the problem but doesn't think it matters | Connect to the scientific domain through consequences --- if this is not addressed, then what? |
+| doesn't understand what you did, or why it solves the problem | State contributions explicitly, contrast with prior work, present results so they visibly solve the problem |
+| doesn't think it fits the audience | Ask who cares most, whether it matches the journal's aims and scope, and whether it is written for that reader |
+| finds the work sloppy | Feedback, multiple edits, proofreading |
+
+: Six reasons, and what fixes them {tbl-colwidths="[36,64]"}
+
+# Feedback checklist {.unnumbered}
+
+Give this to a reader --- and use it on yourself. After reading only the abstract
+and introduction, they should be able to check every box:
+
+- [ ] I clearly understand the problem the work addresses, or the knowledge gap it fills
+- [ ] I clearly see why addressing this problem is important
+- [ ] I understand the approach the authors took
+- [ ] I am convinced the approach differs from what has been tried, in meaningful ways
+- [ ] I am convinced the approach succeeds in addressing the problem
+- [ ] I found the writing easy to follow, and I learned something from reading it
+
+# Practical notes {.unnumbered}
+
+**Find model papers.** Identify the target venue first, then look through recent
+issues for two or three well-written accepted papers resembling yours. Use them
+to judge how introductions are written, what goes in the discussion, and how much
+detail belongs in the main body versus the appendix. Ask a senior author whether
+the ones you picked are good guides.
+
+**Write in active present voice.** *We consider…*, *we apply our method to…*,
+*we compare…*; likewise *Figure 1 shows*, *Table 1 shows*. The exception is a
+domain journal whose field prefers the passive.
+
+**Use the LaTeX template.** The lab's LaTeX template document covers labels and
+cross-referencing, mathematical notation conventions, bibliography management
+with BibTeX, and tables, figures, and algorithms. Two rules from it worth
+repeating here: generate LaTeX tables from R with `xtable` rather than copying
+numbers by hand, and save figures with the `pdf()` command rather than the
+RStudio export button.
+
+**Get help.** The [SPH Writing Lab](https://sph.umich.edu/writing-lab/) and the
+[Sweetland Center for Writing](https://lsa.umich.edu/sweetland/undergraduates/writing-support.html)
+both offer support.
+
+# Further reading {.unnumbered}
+
+Strunk W, White EB. *The Elements of Style* --- grammar and style.
+
+Silvia PJ. *How to Write a Lot: A Practical Guide to Productive Academic
+Writing*. APA LifeTools --- motivation and persistence.
+
+Goodson P. *Becoming an Academic Writer: 50 Exercises for Paced, Productive, and
+Powerful Writing*. SAGE --- exercises, and advice on specific sections.
+
+Lamott A (1994). *Bird by Bird: Some Instructions on Writing and Life*. Anchor
+Books --- the chapter on first drafts is the classic statement of why bad first
+drafts are the only route to good final ones. See also the Publication Coach's
+["The joy of the crappy first draft"](https://www.publicationcoach.com/crappy-first-draft/).
+
+Ecarnot F, Seronde M-F, Chopard R, Schiele F, Meneveau N (2015). Writing a
+scientific article: a step-by-step guide for beginners. *European Geriatric
+Medicine*, 6(6), 573--579 --- a practical walkthrough aimed at first-time
+authors.
+
+# License {.unnumbered}
+
+```{=typst}
+#set text(size: 9pt, fill: rgb("#555555"))
+```
+
+"Academic Writing" © 2026 by Irina Gaynanova is licensed under the
+[Creative Commons Attribution 4.0 International License
+(CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share
+and adapt this guide for any purpose, including commercially, provided you give
+appropriate credit, link to the license, and indicate if changes were made.
+Suggested attribution: "Adapted from Academic Writing by Irina Gaynanova,
+CC BY 4.0." Works listed under Further reading are cited, not included, and
+remain under their own copyright.

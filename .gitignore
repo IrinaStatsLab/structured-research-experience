@@ -1,0 +1,4 @@
+.quarto/
+*.typ
+*_files/
+.DS_Store
