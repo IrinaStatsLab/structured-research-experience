@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite them as below."
+title: "Structured Research Experience: Teaching Materials for Scientific Communication, Simulation Studies, and Reproducibility"
+abstract: >-
+  Open teaching materials for running a structured research experience in
+  statistics. Includes an oral presentation assessment rubric, a guide to
+  academic writing, a guide to designing and reporting simulation studies, and a
+  guide to reproducible project workflows with Git and GitHub. Each document is
+  written in Quarto and rendered to PDF.
+type: dataset
+authors:
+  - family-names: Gaynanova
+    given-names: Irina
+    affiliation: "Department of Biostatistics, University of Michigan"
+    orcid: "https://orcid.org/0000-0002-4116-0268"
+license: CC-BY-4.0
+repository-code: "https://github.com/IrinaStatsLab/structured-research-experience"
+keywords:
+  - statistics education
+  - open educational resources
+  - scientific communication
+  - simulation studies
+  - reproducible research
+  - undergraduate research
+  - assessment rubric
+  - Quarto
+  - R

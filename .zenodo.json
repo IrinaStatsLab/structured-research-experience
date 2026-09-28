@@ -1,0 +1,25 @@
+{
+  "title": "Structured Research Experience: Teaching Materials for Scientific Communication, Simulation Studies, and Reproducibility",
+  "upload_type": "lesson",
+  "description": "<p>Open teaching materials for running a structured research experience in statistics, covering scientific communication (oral and written), the design and reporting of simulation studies, and reproducible research practice.</p><p>Contents:</p><ul><li><strong>Oral Presentation Assessment Rubric</strong> &mdash; five criteria scored 0&ndash;3, with separate content tracks for statistical/data analysis and general scientific presentations.</li><li><strong>Academic Writing</strong> &mdash; the writing process, paper structure for statistics and domain journals, what an introduction must accomplish, why papers get rejected, and a feedback checklist.</li><li><strong>Designing and Reporting Simulation Studies</strong> &mdash; organized around four components (Goal, Design, Implementation, Summary), covering data-generating mechanisms, uniform wrapper interfaces, Monte Carlo standard error, seeds and parallel RNG, and reporting.</li><li><strong>Reproducible Project Workflows</strong> &mdash; Git and GitHub from installation onward, R projects, and project structure.</li></ul><p>Each document is written in Quarto and rendered to PDF via the Typst engine. Sources are included so the materials can be adapted.</p>",
+  "creators": [
+    {
+      "name": "Gaynanova, Irina",
+      "affiliation": "Department of Biostatistics, University of Michigan",
+      "orcid": "0000-0002-4116-0268"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "statistics education",
+    "open educational resources",
+    "scientific communication",
+    "simulation studies",
+    "reproducible research",
+    "undergraduate research",
+    "assessment rubric",
+    "Quarto",
+    "R"
+  ]
+}
