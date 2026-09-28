@@ -1,5 +1,7 @@
 # Structured Research Experience
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23022270.svg)](https://doi.org/10.5281/zenodo.23022270)
+
 Materials developed for teaching scientific communication (oral and written), the
 design of simulation studies, and reproducible research practices, used for
 structured research experiences (SRE) with undergraduate students and beyond.
